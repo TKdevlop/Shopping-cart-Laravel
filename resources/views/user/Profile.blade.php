@@ -19,8 +19,8 @@ Laravel Shopping Cart
                                                                         
                         
                                                         <li class="collection-header grey lighten-1"><strong>Total Price: {{ $order->cart->totalPrice}}</strong></li>
-                                                                      </ul>
-                                        
+
+                                                </ul>
                                           </div>     
                                         @endforeach
                                  

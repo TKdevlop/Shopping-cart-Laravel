@@ -54,33 +54,32 @@ Route::group(['prefix'=>'cart'],function(){
 });
 
 
-Route::group(['prefix'=>'user'],function(){
     Route::group(['middleware'=>'guest'],function(){
-        Route::get('/signup',[
+        Route::get('user/signup',[
             'uses'=> 'UserController@getSignUp',
             'as' => 'users/signup'
         ]);
-        Route::post('/signup',[
+        Route::post('user/signup',[
             'uses'=> 'UserController@postSignUp',
             'as' => 'users/signup'
         ]);
-        Route::get('/signin',[
+        Route::get('user/signin',[
             'uses'=> 'UserController@getSignIn',
             'as' => 'users/signin'
         ]);
-        Route::post('/signin',[
+        Route::post('user/signin',[
             'uses'=> 'UserController@postSignIn',
             'as' => 'users/signin'
         ]);
     });
     Route::group(['middleware'=>'auth'],function(){
-        Route::get('/profile',[
+        Route::get('user/profile',[
             'uses'=> 'UserController@userProfile',
             'as' => 'users/profile'
         ]);
-        Route::get('/logout',[
+        Route::get('user/logout',[
             'uses'=> 'UserController@userLogout',
             'as' => 'users/logout'
         ]);
     });
-});
+
