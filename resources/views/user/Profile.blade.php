@@ -14,11 +14,11 @@ Laravel Shopping Cart
                                         <div class="card-panel">
                                                         <ul class="collection with-header">
                                                                 @foreach ($order->cart->items as $item)
-                                                        <li class="collection-item"><div>{{$item['item']['title'] }} | QTY: {{ $item['qty']}}<a class="secondary-content"> <span class="new badge" data-badge-caption="{{ $item['item']['price'] }}"></span></a></div></li>
+                                                        <li class="collection-item"><div>{{$item['item']['title'] }} | QTY: {{ $item['qty']}}<a class="secondary-content"> <span class="new badge" data-badge-caption="${{ $item['item']['price'] }}"></span></a></div></li>
                                                                 @endforeach
                                                                         
                         
-                                                        <li class="collection-header grey lighten-1"><strong>Total Price: {{ $order->cart->totalPrice}}</strong></li>
+                                                        <li class="collection-header grey lighten-1"><strong>Total Price: ${{ $order->cart->totalPrice}}</strong></li>
 
                                                 </ul>
                                           </div>     
