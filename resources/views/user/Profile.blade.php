@@ -26,5 +26,5 @@ Laravel Shopping Cart
                                  
                                 </div>
                               </div>
-</div>
+</div> 
         @endsection
